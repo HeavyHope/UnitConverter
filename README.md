@@ -1,5 +1,6 @@
 # UnitConverter
 
+![preview](GIF.gif)
 
 ## How to start?
 
@@ -26,4 +27,5 @@ http://127.0.0.1:8000/temperature
 
 ## Links:
 https://roadmap.sh/projects/unit-converter
+
 https://github.com/HeavyHope
