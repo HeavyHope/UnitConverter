@@ -1,0 +1,114 @@
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    min-width: 400px;
+}
+section{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2e323a;
+    background:linear-gradient(to top, #2e323a, rgb(126, 119, 115))
+}
+/* wrapp */
+.wrapp{
+    border-radius: 30px;
+    border-color: rgb(50, 33, 65);
+    display: inline-block;
+    border-style: solid;
+    padding: 25px;
+    max-width: 300px;
+    background-color: bisque;
+}
+.title
+{
+    text-align: center;
+    font-size: larger;
+}
+/* links */
+.links{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.links>a{
+    border-style: solid;
+    padding: 10px;
+    margin: 5px;
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    text-decoration: none;
+    
+}
+.links>a:hover{
+    background-color: rgb(160, 252, 252);
+}
+/* Status logo */
+.status{
+    color: rgb(0, 0, 0);
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    border-bottom: 3px solid #000;
+    border-top: 3px solid #000;
+    margin-top: 5px;
+}
+/* form */
+.form_select{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+.label_select{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    
+}
+.input_field{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.submit_field{
+    display: flex;
+    justify-content: center;
+}
+#submit_btn{
+    font-size: large;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: rgb(136, 199, 241);
+    cursor: pointer;
+}
+/* field_result */
+
+.field_result{
+text-align: center;
+border-style: solid;
+margin: 10px;
+padding-left: 5px;
+padding-right: 5px;
+background-color: aliceblue;
+}
+
+/* footer */
+
+.footer_field{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(153, 138, 119);
+    
+}
+.logo>a>img{
+    max-width:30px;
+    border-radius: 50%;
+    margin: 5px;
+    object-fit: cover;
+}

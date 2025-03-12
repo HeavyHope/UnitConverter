@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "my_css/css.css" %}">
+    <title>UnitConverter</title>
+</head>
+<body>
+    <header></header>
+    <section>
+    
+        <div class = "wrapp">
+            <div class="title">
+                UnitConverter
+            </div>
+            <div class="links">
+                <a href="{% url "length" %}">Length</a>
+                <a href="{% url "temperature" %}">Temperature</a>
+                <a href="{% url "weight" %}">Weight</a>
+            </div>
+            <div class="status">
+                <p>{{status}}</p>
+            </div>
+            <div class="forma">
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <div class="label_select">
+                        <div style="margin-left:10px">
+                            <label for="from_unit">From</label>
+                        </div>
+                        <div style="margin-right:25px">
+                            <label for="to_unit">To</label>
+                        </div>
+                    </div>
+                    <div class="form_select">
+                        <select name="from_unit" id="from_unit">
+                            {% for item in items %}
+                            <option value="{{ item }}" {% if item == selected_from %} selected {% endif %}>{{ item }}
+                            {% endfor %}
+                        </select>
+                        <select name="to_unit" id="to_unit">
+                            {% for item in items %}
+                            <option value="{{item}}" {% if item == selected_to %} selected {% endif %}>{{item}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="input_field">
+                        <input style="text-align: center;" type="number" min="0" name="from_value" placeholder="input value">
+                    </div>
+                    <div class="submit_field">
+                        <input id="submit_btn" type="submit"value="Enter">
+                    </div>
+                    {% if result %}
+                    <div class="field_result">
+                        <div class="result">
+                            <p>Result: {{result}}</p>
+                        </div>
+                    </div>
+                    {% endif %}
+                </form>
+            </div>
+        </div>
+    
+    </section>
+    <footer>
+        <div class="footer_field">
+            
+            <div class="logo">
+                <a id="git_logo" href="https://github.com/HeavyHope" ><img src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png" alt="GitLogo"></a>
+            </div>
+            <p>HeavyHope &copy; 2025</p>
+        </div>
+    </footer>
+
+</body>
+</html>
